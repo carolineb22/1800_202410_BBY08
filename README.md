@@ -1,8 +1,8 @@
 # Project Title
-
+Pathways
 ## 1. Project Description
-State your app in a nutshell, or one-sentence pitch. Give some elaboration on what the core features are.  
-This browser based web application to ... 
+Our team BBY08 is developing a web application to help users to become more aware and preserve indigenous language and culture that are dying out by creating an engaging and fun method to learn languages, important information and connect them to resources to learn more. 
+
 
 ## 2. Names of Contributors
 List team members and/or short bio's here... 
@@ -43,17 +43,26 @@ Content of the project folder:
 ```
  Top level of project folder: 
 ├── .gitignore               # Git ignore file
-├── index.html               # landing HTML file, this is what users see when you come to url
+├── index.html               # landing HTML file, this is what users 
+├── journey.html             # language journey page, this is where users work on their laguage learning! 
+├── login.html               # where users will login 
+├── main.html                # this is the main page users will see once logged in
+├── register.html            # this is the page where new users will register
 └── README.md
 
 It has the following subfolders and files:
 ├── .git                     # Folder for git repo
 ├── images                   # Folder for images
-    /blah.jpg                # Acknowledge source
+    /background.png          # Art by Caroline 
+    /bubble.png              # Art by Caroline 
+    /TempLogoTurtle.png      # Temp logo
 ├── scripts                  # Folder for scripts
-    /blah.js                 # 
+    /authentication.js       # firebase code
+    /Popups.js               # code for popups in the journey page
+    /script.js               #
 ├── styles                   # Folder for styles
-    /blah.css                # 
+    /journeyStyle.css        # style sheet for journey page
+    /style.css               # main style sheet
 
 
 
