@@ -22,7 +22,7 @@ footer {
         grid-template-columns: 33.3% 33.3% 33.3% 33.3%;
         grid-template-rows: 20vh 20vh 20vh 20vh 20vh 20vh 20vh 20vh 20vh 20vh 
                             20vh 20vh 20vh 20vh 20vh;
-        background-image: url('images/background.png');
+        background-image: url('images/backgroundLarge.png');
         background-repeat: repeat;
         background-size: contain;
     }
