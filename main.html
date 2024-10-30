@@ -9,10 +9,13 @@
     }
 
     footer {
-      size: 2px;
-      background: lightblue;
-    }
+            bottom: 0%;
+            position: fixed;
+            size: 2px;
+            background: beige;
+        }
   </style>
+ 
   <meta name="comp1800 template" content="My 1800 App">
 
   <!-- Required meta tags -->
@@ -26,6 +29,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5e83924064.js" crossorigin="anonymous"></script>
   <!-- Bootstrap Library CSS CDN go here -->
   <!-- Boostrap Library JS CDN  go here -->
 
@@ -39,6 +43,7 @@
   <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+  
 
 
   <!-- Other libraries go here -->
@@ -51,52 +56,63 @@
 
 </head>
 
-<body>
   <div class="container">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+
+    <div class="container">
+      <div class="profile"><button style='font-size:16px'><i class='fas fa-users'></i><div class="Pr">Profile</div></button></div>
+      <nav class="navbar navbar-light bg-beige">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon">
+              </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Track My Progress</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Friends</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Leaderboard</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">More Information</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+    
 
     <!------------------------------>
     <!-- Your HTML Layout go here -->
     <!------------------------------>
     <!-- Stuff for body goes here -->
 
-
     <div class="container col-xl-10 col-xxl-8 px-4 py-5">
       <div class="row align-items-center g-lg-5 py-5">
         <div class="col-lg-7 text-center text-lg-start">
-          <h1 class="display-4 fw-bold lh-1 mb-3">Welcome to Pathways...</h1>
-          <p class="col-lg-10 fs-4">Our goal is to preserve indigenous languages and give people a simple and accessible
-            tool to learn them.</p>
-          <p class="col-lg-10 fs-4">Sign up now to start your journey!</p>
+          <h1 class="display-4 fw-bold lh-1 mb-3">Quote of the Day:</h1>
+          <p class="col-lg-10 fs-4">"We as Aboriginal people still have to fight to prove that we are straight out plain human beings, the same as everyone else."</p>
+          <p class="col-lg-10 fs-4">– Neville Bonner</p>
         </div>
         <div class="col-md-10 mx-auto col-lg-5">
+          <div class="buttons">
+      
+            <h3><div class="banner">Welcome!</div><span id="name-goes-here"></span></h3>
+            <form action="/submit-registration" method="POST">
+                <button type="submit" id="journey">Journey</button>
+                <button type="submit" id="toolbox">Toolbox</button>
+            </form>
+
+           
+    
           
-      </div>
-    </div>
+      
+    
 
 
 
@@ -119,6 +135,12 @@
   <!-- <script src="./scripts/script.js"></script> -->
   </div>
   <footer>Pathways Ltd.</footer>
-</body>
+
 
 </html>
+
+
+
+
+
+  
