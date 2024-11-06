@@ -2,10 +2,6 @@
 body {
     background-color: beige;
 }
-
-.container{
-    background-color: beige;
-}
 .navbar-toggler{
     position: fixed;
     top: 9%;
