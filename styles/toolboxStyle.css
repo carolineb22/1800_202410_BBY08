@@ -119,3 +119,17 @@ body {
     font-size: 16px;
     cursor: pointer;
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 3 equal columns */
+    gap: 10px; /* Space between grid items */
+}
+
+.grid-item {
+    color: lightgreen;
+    background-color: lightgreen;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
