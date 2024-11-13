@@ -14,7 +14,7 @@ footer {
 }
 
 /* Phone screen */
-@media only screen and (min-width: 1px) and (max-width: 700px) {
+@media only screen and (max-width: 700px) {
     #container {
         display: grid;
         width: 100%;
@@ -22,7 +22,7 @@ footer {
         grid-template-columns: 33.3% 33.3% 33.3% 33.3%;
         grid-template-rows: 20vh 20vh 20vh 20vh 20vh 20vh 20vh 20vh 20vh 20vh 
                             20vh 20vh 20vh 20vh 20vh;
-        background-image: url('images/backgroundLarge.png');
+        background-image: url('../images/backgroundLarge.png');
         background-repeat: repeat;
         background-size: contain;
     }
@@ -112,44 +112,46 @@ footer {
     #container {
         display: grid;
         width: auto;
-        height: 1000px;
+        height: 2000px;
         grid-template-columns: 20% 20% 20% 20% 20%;
         grid-template-rows: 20vh 20vh 20vh 20vh 20vh;
+        background-image: url('../images/backgroundLarge.png');
+        background-repeat: repeat;
+        background-size: contain;
     }
 
     #lvl1 {
-        background-color: #00ffe5;
         grid-column: 3 / span 1;
         grid-row: 2 / span 1;
         font-size: 12pt;
     }
 
     #lvl2 {
-        background-color: #dd00ff;
         grid-column: 1 / span 1;
         grid-row: 1 / span 1;
     }
 }
 
 /* Desktop */
-@media only screen and (min-width: 1281px) and (max-width: 1600px) {
+@media only screen and (min-width: 1281px) {
     #container {
         display: grid;
         width: auto;
-        height: 1000px;
+        height: 4000px;
         grid-template-columns: 20% 20% 20% 20% 20%;
         grid-template-rows: 20vh 20vh 20vh 20vh 20vh;
+        background-image: url('../images/backgroundLarge.png');
+        background-repeat: repeat;
+        background-size: contain;
     }
 
     #lvl1 {
-        background-color: #ff4d00;
         grid-column: 3 / span 1;
         grid-row: 2 / span 1;
         font-size: 12pt;
     }
 
     #lvl2 {
-        background-color: #1d3f1e;
         grid-column: 1 / span 1;
         grid-row: 1 / span 1;
     }
