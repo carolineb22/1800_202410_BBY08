@@ -30,8 +30,6 @@
 
         .nav-item {
             background: rgb(255, 255, 255);
-            height: 90px;
-            width: 300px;
             font-size: 25pt;
             border-radius: 10px;
             text-align: center;
@@ -41,8 +39,6 @@
         }
         .nav-item1 {
             background: rgb(255, 255, 255);
-            height: 90px;
-            width: 300px;
             font-size: 25pt;
             border-radius: 10px;
             text-align: center;
@@ -54,7 +50,6 @@
     </head>
 
     <body> 
-
         <nav class="navbar">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"></a>
@@ -85,8 +80,16 @@
             </div>
         </nav>
         <div id="container">
+            <div id="top"></div>
+
+            <!-- <div style="z-index: 1;" id="jinx" class="jinx">
+                <span class="centered"> <span class="cursive">Jinx</span></span>
+                <img src="/img/card.jpg" alt="jinx card" />
+              </div> -->
+
             <div id="lvl1">
                 <div class="popup" onclick="myFunction1()"><img class="bubbleBig" src="./images/bubble.png" alt="bubble">
+                    <span style="z-index: 1;"><span class="center">Start</span></span></span>
                     <span class="popuptext" id="myPopup1"><p>Start</p>
                         <p>This lesson will teach you the basics of the language, how it came about and prepare you to start learning!</p>
                         <a href="lesson1.html">
@@ -126,10 +129,34 @@
             <div id="lvl5">
                 <span><a href=><img class="bubbleSml" src="./images/bubble.png" alt="bubble"></a></span>
             </div>
-        </div>
-        
-        
 
+            <div id="lvl6">
+                <span><a href=><img class="bubbleBig" src="./images/bubble.png" alt="bubble"></a></span>
+            </div>
+
+            <div id="lvl7">
+                <span><a href=><img class="bubbleSml" src="./images/bubble.png" alt="bubble"></a></span>
+            </div>
+
+            <div id="lvl8">
+                <span><a href=><img class="bubbleMdm" src="./images/bubble.png" alt="bubble"></a></span>
+            </div>
+
+            <div id="lvl9">
+                <span><a href=><img class="bubbleSml" src="./images/bubble.png" alt="bubble"></a></span>
+            </div>
+
+            <div id="lvl10">
+                <div class="popup" onclick="myFunction10()"><img class="bubbleSml" src="./images/bubble.png" alt="bubble">
+                    <span class="popuptext" id="myPopup10">Almost done!
+                        <p>Let's put together all we've learned so far!</p>
+                        <a href="https://www.example.com">
+                            <button>Start Lesson</button>
+                          </a>
+                    </span>
+                  </div>
+            <a name="bottom" id="bottom"></a>
+        </div>
     </body> 
     
 </html>

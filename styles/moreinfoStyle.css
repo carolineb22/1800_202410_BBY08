@@ -24,6 +24,7 @@
     margin-left: 15%;
     margin-right: 5%;
     text-align: center;
+    padding: 20px;
 }
 
 .squamish {
@@ -43,6 +44,7 @@
     font-size: 20pt;
     margin-left: 15%;
     margin-right: 5%;
+    padding: 50px;
 }
 
 .title {
@@ -66,4 +68,5 @@
     font-size: 20pt;
     margin-left: 15%;
     margin-right: 5%;
+    padding: 50px;
 }

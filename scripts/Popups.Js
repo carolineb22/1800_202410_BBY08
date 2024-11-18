@@ -12,3 +12,7 @@ function myFunction3() {
   var popup3 = document.getElementById("myPopup3");
   popup3.classList.toggle("show");
 }
+function myFunction10() {
+  var popup3 = document.getElementById("myPopup10");
+  popup3.classList.toggle("show");
+}
