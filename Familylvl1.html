@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Family Level 1 - Learn Family Terms</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #91b4da;
+    }
+
+    .family-container {
+      max-width: 900px;
+      margin: 50px auto;
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .family-term {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+
+    .tooltip-inner {
+      max-width: 200px;
+    }
+
+    .footer {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="journey.html">
+      <img src="images/back.png" alt="Back" width="30" height="30">
+    </a>
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="settings.html">
+          <img src="images/settings.png" alt="Settings" width="30" height="30">
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <img src="images/pause.png" alt="Pause" width="30" height="30">
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="family-container">
+  <h2 class="text-center mb-4">Family Level 1: Learn Family Terms</h2>
+  <p class="text-center text-muted mb-4">Learn and practice referring to family members and friends in a fun, interactive way!</p>
+
+  <!-- Interactive Section -->
+  <div>
+    <h5>Match the Family Terms:</h5>
+
+    <!-- Question 1 -->
+    <div class="family-term">
+      <strong>1. elhtách</strong>
+      <select class="form-select" data-bs-toggle="tooltip" data-bs-placement="top" title="Hint: Think of siblings!">
+        <option value="">Select a match</option>
+        <option value="mother">Mother</option>
+        <option value="brother">Brother</option>
+        <option value="friend">Friend</option>
+      </select>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="family-term">
+      <strong>2. chésha7</strong>
+      <select class="form-select" data-bs-toggle="tooltip" data-bs-placement="top" title="Hint: Related to parenting!">
+        <option value="">Select a match</option>
+        <option value="father">Father</option>
+        <option value="friend">Friend</option>
+        <option value="child">Child</option>
+      </select>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="family-term">
+      <strong>3. man</strong>
+      <select class="form-select" data-bs-toggle="tooltip" data-bs-placement="top" title="Hint: It’s in the word!">
+        <option value="">Select a match</option>
+        <option value="man">Man</option>
+        <option value="child">Child</option>
+        <option value="father">Father</option>
+      </select>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="family-term">
+      <strong>4. men̓</strong>
+      <select class="form-select" data-bs-toggle="tooltip" data-bs-placement="top" title="Hint: Male family member">
+        <option value="">Select a match</option>
+        <option value="brother">Brother</option>
+        <option value="mother">Mother</option>
+        <option value="sister">Sister</option>
+      </select>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="family-term">
+      <strong>5. kwepkwúpits</strong>
+      <select class="form-select" data-bs-toggle="tooltip" data-bs-placement="top" title="Hint: Closest bonds!">
+        <option value="">Select a match</option>
+        <option value="family">Family</option>
+        <option value="friend">Friend</option>
+        <option value="father">Father</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Fill in the Blank Section -->
+  <div class="mt-4">
+    <h5>Fill in the blanks:</h5>
+    <p>Write the correct family term for the description below:</p>
+
+    <div class="mb-3">
+      <label><strong>1. This term means "brother":</strong></label>
+      <input type="text" class="form-control" placeholder="Your answer here">
+    </div>
+
+    <div class="mb-3">
+      <label><strong>2. This term means "father":</strong></label>
+      <input type="text" class="form-control" placeholder="Your answer here">
+    </div>
+
+    <div class="mb-3">
+      <label><strong>3. This term refers to "family":</strong></label>
+      <input type="text" class="form-control" placeholder="Your answer here">
+    </div>
+  </div>
+
+  <!-- Submit Button -->
+  <div class="text-center">
+    <button class="btn btn-primary mt-3">Submit Answers</button>
+  </div>
+</div>
+
+<footer class="footer">
+  Pathways Ltd. &copy; 2024
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Enable Bootstrap tooltips
+  const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+  const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl);
+  });
+</script>
+</body>
+</html>
