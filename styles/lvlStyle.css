@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: teal;
+  }
+
+  .family-container {
+    max-width: 900px;
+    margin: 50px auto;
+    background: beige;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  nav {
+    background: beige;
+  }
+
+  .family-term {
+    padding: 20px 0;
+
+  }
+
+  .family-term h2{
+    font-size: 18px;
+    color: #001e4d;
+  }
+  .btn{
+    background: teal;
+    color: white;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+
+  .btn:hover:not([disabled]){
+    background: turquoise;
+    color: black;
+  }
+
+  .btn:disabled{
+    cursor: no-drop;
+  }
+
+  #next-btn{
+    background: black;
+    color: white;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+  }
+
+  .correct{
+    background: green;
+  }
+
+  .incorrect{
+    background: red;
+  }
+
+  .tooltip-inner {
+    max-width: 200px;
+  }
+
+  .footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #777;
+  }
