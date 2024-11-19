@@ -106,12 +106,12 @@ body {
     width: 100px;
     height: 100px;
     margin: 0 auto;
-    /* Centers the circle horizontally */
+   
   }
 
   .button-row {
     display: flex;
-    gap: 10px; /* Space between buttons */
+    gap: 10px;
 }
 
 .button-row button {
@@ -120,11 +120,7 @@ body {
     cursor: pointer;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr); /* 3 equal columns */
-    gap: 10px; /* Space between grid items */
-}
+
 
 .grid-item {
     color: lightgreen;
@@ -133,3 +129,74 @@ body {
     text-align: center;
     border: 1px solid #ddd;
 }
+
+.container {
+    background: beige
+}
+
+footer {
+    bottom: 0%;
+    position: fixed;
+    size: 2px;
+    background: beige;
+}
+
+
+.word {
+    cursor: pointer;
+}
+
+.popup {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+}
+
+.center-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (min-width: 300px) and (max-width: 768px) {
+    body {
+        font-size: 16px;
+        background-color: lightyellow;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 10px; 
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    body {
+      font-size: 18px;
+      background-color: lightyellow;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr); 
+        gap: 10px; 
+    }
+  }
+
+  @media (min-width: 1025px) {
+    body {
+      font-size: 20px;
+      background-color: lightcoral;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr); 
+        gap: 10px; 
+    }
+  }

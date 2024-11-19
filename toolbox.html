@@ -6,38 +6,7 @@
 
 
     <style>
-        .container {
-            background: beige
-        }
-
-        footer {
-            bottom: 0%;
-            position: fixed;
-            size: 2px;
-            background: beige;
-        }
-
-
-        .word {
-            cursor: pointer;
-        }
-
-        .popup {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            padding: 5px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            white-space: nowrap;
-        }
-
-        /* Center container styling */
-        .center-container {
-            text-align: center;
-            margin-top: 20px;
-        }
+ 
     </style>
     <meta name="comp1800 template" content="My 1800 App">
 
@@ -123,64 +92,7 @@
         </div>
 
         <!-- Centered content -->
-        <div class="center-container">
-            <h2>Click on a word to see the translation</h2>
-            <p><span class="word" onclick="showTranslation(this, 'Hello')">Hello</span></p>
-            <p><span class="word" onclick="showTranslation(this, 'Goodbye')">Goodbye</span></p>
-            <p><span class="word" onclick="showTranslation(this, 'Thank you')">Thank you</span></p>
-            <p><span class="word" onclick="showTranslation(this, 'Please')">Please</span></p>
-            <p><span class="word" onclick="showTranslation(this, 'Yes')">Yes</span></p>
-            <p><span class="word" onclick="showTranslation(this, 'No')">No</span></p>
-            <p><span class="word" onclick="showTranslation(this, 'Friend')">Friend</span></p>
-            <p><span class="word" onclick="showTranslation(this, 'Water')">Water</span></p>
-            <p><span class="word" onclick="showTranslation(this, 'Food')">Food</span></p>
-            <p><span class="word" onclick="showTranslation(this, 'House')">House</span></p>
-            <p><span class="word" onclick="showTranslation(this, 'Earth')">Earth</span></p>
-            <p><span class="word" onclick="showTranslation(this, 'Mountain')">Mountain</span></p>
-        </div>
-
-        <!-- Popup to show translation -->
-        <div id="translationPopup" class="popup"></div>
-
-        <script>
-            const translations = {
-                'Hello': 'Í7áx̱a',
-                'Goodbye': 'Huy chexw',
-                'Thank you': 'Chen kw’enmantum',
-                'Please': 'Chénkw\'en',
-                'Yes': 'Áwat',
-                'No': 'Nilh',
-                'Friend': 'Sníchim',
-                'Water': 'Stakw',
-                'Food': 'Sha7áy',
-                'House': 'Ch’á7elhay',
-                'Earth': 'St’éx̱ts’em',
-                'Mountain': 'Nexwlelexm',
-            };
-
-            function showTranslation(element, word) {
-                const popup = document.getElementById('translationPopup');
-                const translation = translations[word] || "Translation not available";
-
-                popup.textContent = translation;
-                popup.style.display = 'block';
-
-                const rect = element.getBoundingClientRect();
-                const offsetX = window.scrollX || window.pageXOffset;
-                const offsetY = window.scrollY || window.pageYOffset;
-
-                popup.style.left = `${rect.right + offsetX + 10}px`;
-                popup.style.top = `${rect.top + offsetY}px`;
-            }
-
-            document.addEventListener('click', (event) => {
-                const popup = document.getElementById('translationPopup');
-                if (!event.target.classList.contains('word')) {
-                    popup.style.display = 'none';
-                }
-            });
-        </script>
-
+       
         <div>
             <h1>
                 Squamish Alphabet
@@ -242,7 +154,36 @@
                     audioPlayer.play(); 
                 }
             </script>
+
+<div class="center-container">
+    <h2>Click on a word to see the translation</h2>
+    <span class="word" onclick="showTranslation(this, 'Hello')">Hello &nbsp &nbsp</span>
+    <span class="word" onclick="showTranslation(this, 'Goodbye')">Goodbye &nbsp  &nbsp</span>
+    <span class="word" onclick="showTranslation(this, 'Thank you')">Thank you  &nbsp  &nbsp</span>
+    <span class="word" onclick="showTranslation(this, 'Please')">Please  &nbsp  &nbsp</span>
+    <span class="word" onclick="showTranslation(this, 'Yes')">Yes  &nbsp  &nbsp</span>
+    <span class="word" onclick="showTranslation(this, 'No')">No &nbsp  &nbsp</span>
+    <span class="word" onclick="showTranslation(this, 'Friend')">Friend  &nbsp  &nbsp</span>
+    <span class="word" onclick="showTranslation(this, 'Water')">Water  &nbsp  &nbsp</span>
+    <span class="word" onclick="showTranslation(this, 'Food')">Food  &nbsp  &nbsp</span>
+    <span class="word" onclick="showTranslation(this, 'House')">House  &nbsp  &nbsp</span>
+    <span class="word" onclick="showTranslation(this, 'Earth')">Earth  &nbsp  &nbsp</span>
+    <span class="word" onclick="showTranslation(this, 'Mountain')">Mountain  &nbsp &nbsp</span>
+</div>
+
+<!-- Popup to show translation -->
+<div id="translationPopup" class="popup"></div>
+
+<div class="container">
+    <div class="center-container">
+        <input type="text" id="search-box" placeholder="Type a word..." />
+        <ul id="dropdown" class="popup"></ul>
+    </div>
+
+   
         </div>
+
+        <script src="/scripts/toolboxscript.js"></script>
 
 </body>
 
