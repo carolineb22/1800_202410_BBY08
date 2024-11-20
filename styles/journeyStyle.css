@@ -1,10 +1,15 @@
 html,
+
+element-selector {
+	/* Hides overflow on the x-axis and y-axis */
+	overflow-x: hidden; 
+}
+
 body{
     margin: 0;
     padding: 0;
     background-image: url('../images/backgroundLarge.png');
     background-repeat: repeat;
-    background-size: contain;
 }
 
 * {
@@ -28,10 +33,9 @@ body{
 @media only screen and (max-width: 700px) {
         #container {
             display: grid;
-            width: 100%;
             height: 1000px;
             grid-template-columns: 33.3% 33.3% 33.3% 33.3%;
-            grid-template-rows: 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh;
+            grid-template-rows: 15vh 15vh 15vh 15vh 15vh 15vh 15vh 15vh 15vh 15vh 15vh;
         }
     
         .bubbleBig {
@@ -55,6 +59,7 @@ body{
         #lvl2 {
             grid-column: 1 / span 1;
             grid-row: 12 / span 1;
+            margin-top: 100px;
         }
         #lvl3 {
             grid-column: 3 / span 1;
@@ -74,6 +79,7 @@ body{
         #lvl6 {
             grid-column: 3 /span 1; 
             grid-row: 8 / span 1;
+            margin-bottom: 100px;
         }
     
         #lvl7 {
@@ -85,12 +91,17 @@ body{
             grid-row: 6 / span 1;
         }
         #lvl9 {
-            grid-column: 2 /span 1; 
+            grid-column: 3 /span 1; 
             grid-row: 5 / span 1;
         }
         #lvl10 {
             grid-column: 3 /span 1; 
             grid-row: 4 / span 1;
+        }
+
+        #lvl11 {
+            grid-column: 1 /span 1; 
+            grid-row: 3 / span 1;
         }
 
         #top{
@@ -111,7 +122,7 @@ body{
 /* The actual popup (appears on top) */
 .popup .popuptext {
     visibility: hidden;
-    width: 300px;
+    width: 150px;
     background-color: #7185d4;
     color: #fff;
     text-align: center;
@@ -120,7 +131,7 @@ body{
     position: absolute;
     z-index: 1;
     bottom: 100%;
-    margin-left: -40px;
+    margin-left: -90%;
   }
   
   /* Toggle this class when clicking on the popup container (hide and show the popup) */
@@ -132,16 +143,17 @@ body{
 
 /* Ipad screen */
 @media only screen and (min-width: 701px) and (max-width: 1280px) {
+
     #container {
         display: grid;
-        width: 100%;
-        height: 2000px;
+        height: 1000px;
         grid-template-columns: 33.3% 33.3% 33.3% 33.3%;
-        grid-template-rows: 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh;
+        grid-template-rows: 15vh 15vh 15vh 15vh 15vh 15vh 15vh 15vh 15vh 15vh 15vh;
     }
 
     .bubbleBig {
         width: 175px;
+        margin-bottom: 40px;
     }
 
     .bubbleMdm {
@@ -160,7 +172,7 @@ body{
     #lvl2 {
         grid-column: 1 / span 1;
         grid-row: 12 / span 1;
-        margin-left: 90px;
+        margin-top: 100px;
     }
     #lvl3 {
         grid-column: 3 / span 1;
@@ -170,7 +182,6 @@ body{
     #lvl4 {
         grid-column: 1 /span 1;
         grid-row: 10 / span 1;
-        margin-left: 90px;
     }
 
     #lvl5 {
@@ -181,6 +192,7 @@ body{
     #lvl6 {
         grid-column: 3 /span 1; 
         grid-row: 8 / span 1;
+        margin-bottom: 100px;
     }
 
     #lvl7 {
@@ -190,15 +202,19 @@ body{
     #lvl8 {
         grid-column: 1 /span 1; 
         grid-row: 6 / span 1;
-        margin-left: 90px;
     }
     #lvl9 {
-        grid-column: 2 /span 1; 
+        grid-column: 3 /span 1; 
         grid-row: 5 / span 1;
     }
     #lvl10 {
         grid-column: 3 /span 1; 
         grid-row: 4 / span 1;
+    }
+
+    #lvl11 {
+        grid-column: 1 /span 1; 
+        grid-row: 3 / span 1;
     }
 
     #top{
@@ -208,156 +224,179 @@ body{
 
 
 
-    /* Popup container */
+
+/* Popup container */
 .popup {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-  }
-  
+position: relative;
+display: inline-block;
+cursor: pointer;
+}
+
 /* The actual popup (appears on top) */
 .popup .popuptext {
-    visibility: hidden;
-    width: 200px;
-    background-color: #7185d4;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    margin-left: -120%;
-  }
-  
-  /* Popup arrow */
-  .popup .popuptext::after {
-    position: absolute;
-    top: 100%;
-    left: 48%;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #7185d4 transparent transparent transparent;
-  }
-  
-  /* Toggle this class when clicking on the popup container (hide and show the popup) */
-  .popup .show {
-    visibility: visible;
-  }
+visibility: hidden;
+width: 150px;
+background-color: #7185d4;
+color: #fff;
+text-align: center;
+border-radius: 6px;
+padding: 8px;
+position: absolute;
+z-index: 1;
+bottom: 100%;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+visibility: visible;
+}
+
 }
 
 /* Desktop */
 @media only screen and (min-width: 1281px) {
-        #container {
-            display: grid;
-            width: 100%;
-            height: 2000px;
-            grid-template-columns: 33.3% 33.3% 33.3% 33.3%;
-            grid-template-rows: 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh
-            10vh 10vh 10vh;
-        }
-    
-        .bubbleBig {
-            width: 175px;
-        }
-    
-        .bubbleMdm {
-            width: 150px;
-        }
-    
-        .bubbleSml {
-            width: 100px;
-        }
-    
-        #lvl1 {
-            grid-column: 2 / span 1;
-            grid-row: 13 / span 1;
-        }
-    
-        #lvl2 {
-            grid-column: 1 / span 1;
-            grid-row: 12 / span 1;
-            margin-left: 150px;
-        }
-        #lvl3 {
-            grid-column: 3 / span 1;
-            grid-row: 11 / span 1;
-        }
-    
-        #lvl4 {
-            grid-column: 1 /span 1;
-            grid-row: 10 / span 1;
-        }
-    
-        #lvl5 {
-            grid-column: 2 /span 1; 
-            grid-row: 9 / span 1;
-        }
-    
-        #lvl6 {
-            grid-column: 3 /span 1; 
-            grid-row: 8 / span 1;
-        }
-    
-        #lvl7 {
-            grid-column: 2 /span 1; 
-            grid-row: 7 / span 1;
-        }
-        #lvl8 {
-            grid-column: 1 /span 1; 
-            grid-row: 6 / span 1;
-        }
-        #lvl9 {
-            grid-column: 2 /span 1; 
-            grid-row: 5 / span 1;
-        }
-        #lvl10 {
-            grid-column: 3 /span 1; 
-            grid-row: 4 / span 1;
-        }
+    #container {
+        display: grid;
+        height: 1000px;
+        grid-template-columns: 33.3% 33.3% 33.3% 33.3%;
+        grid-template-rows: 15vh 15vh 15vh 15vh 15vh 15vh 15vh 15vh 15vh 15vh 15vh;
+    }
 
-        #top{
-            grid-column: 1 /span 3; 
-            grid-row: 1 / span 3;
-        }
+    .bubbleBig {
+        width: 300px;
+        margin-bottom: 40px;
+    }
+
+    .bubbleMdm {
+        width: 225px;
+    }
+
+    .bubbleSml {
+        width: 150px;
+    }
+
+    #lvl1 {
+        grid-column: 2 / span 1;
+        grid-row: 13 / span 1;
+        margin-top: 100px;
+    }
+
+    #lvl2 {
+        grid-column: 1 / span 1;
+        grid-row: 12 / span 1;
+        margin-top: 100px;
+    }
+    #lvl3 {
+        grid-column: 3 / span 1;
+        grid-row: 11 / span 1;
+    }
+
+    #lvl4 {
+        grid-column: 1 /span 1;
+        grid-row: 10 / span 1;
+    }
+
+    #lvl5 {
+        grid-column: 2 /span 1; 
+        grid-row: 9 / span 1;
+    }
+
+    #lvl6 {
+        grid-column: 3 /span 1; 
+        grid-row: 8 / span 1;
+        margin-bottom: 100px;
+    }
+
+    #lvl7 {
+        grid-column: 2 /span 1; 
+        grid-row: 7 / span 1;
+    }
+    #lvl8 {
+        grid-column: 1 /span 1; 
+        grid-row: 6 / span 1;
+    }
+    #lvl9 {
+        grid-column: 3 /span 1; 
+        grid-row: 5 / span 1;
+        margin-top: 30px;
+    }
+    #lvl10 {
+        grid-column: 3 /span 1; 
+        grid-row: 4 / span 1;
+        margin-bottom: 300px;
+    }
+
+    #lvl11 {
+        grid-column: 1 /span 1; 
+        grid-row: 3 / span 1;
+    }
+
+    #top{
+        grid-column: 1 /span 3; 
+        grid-row: 1 / span 3;
+    }
 
 
 
 
-    /* Popup container */
+/* Popup container */
 .popup {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-  }
-  
+position: relative;
+display: inline-block;
+cursor: pointer;
+}
+
 /* The actual popup (appears on top) */
 .popup .popuptext {
-    visibility: hidden;
-    width: 400px;
-    background-color: #7185d4;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    margin-left: -240px;
-  }
-  
-  /* Popup arrow */
-  .popup .popuptext::after {
-    position: absolute;
-    top: 100%;
-    left: 48%;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #7185d4 transparent transparent transparent;
-  }
-  
-  /* Toggle this class when clicking on the popup container (hide and show the popup) */
-  .popup .show {
-    visibility: visible;
-  }
+visibility: hidden;
+width: 300px;
+background-color: #7185d4;
+color: #fff;
+text-align: center;
+border-radius: 6px;
+padding: 8px;
+position: absolute;
+z-index: 1;
+bottom: 100%;
+}
+#myPopup1 {
+    margin-left: -290px !important;
+}
+#myPopup2 {
+    margin-left: -240px !important;
+}
+#myPopup3 {
+    margin-left: -260px !important;
+}
+#myPopup4 {
+margin-left: -240px !important;
+}
+#myPopup5 {
+    margin-left: -220px !important;
+}
+#myPopup6 {
+    margin-left:-300px !important;
+}
+#myPopup7 {
+    margin-left: -220px !important;
+}
+#myPopup8 {
+    margin-left: -220px !important;
+}
+#myPopup9 {
+    margin-left: -220px !important;
+}
+#myPopup10 {
+    margin-left: -260px !important;
+}
+#myPopup11 {
+    margin-left: -150px !important;
+}
+
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+visibility: visible;
+}
+
 }

@@ -5,7 +5,7 @@
     <title>Pathways - Journey</title>
 
     <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" type="text/css" href="styles\journeyStyle.css"/> 
+    <link rel="stylesheet" type="text/css" href="styles\journeyStyle.css" />
     <script src="scripts\Popups.Js"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -16,10 +16,6 @@
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/5e83924064.js" crossorigin="anonymous"></script>
     <style>
-        
-
-
-
         .nav-item {
             background: rgb(255, 255, 255);
             height: 65px;
@@ -31,6 +27,7 @@
             border: 3px solid green;
             padding-top: 5px;
         }
+
         .nav-item1 {
             background: rgb(255, 255, 255);
             height: 65px;
@@ -44,126 +41,245 @@
         }
     </style>
 
-    </head>
+</head>
 
-    <body> 
-        <nav class="navbar">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon">
-                    </span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item1">
-                            <a class="nav-link" href="main.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Track My Progress</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Friends</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Leaderboard</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="moreInfo.html">More Information</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <div id="container">
-            <div id="top"></div>
-
-            <!-- <div style="z-index: 1;" id="jinx" class="jinx">
-                <span class="centered"> <span class="cursive">Jinx</span></span>
-                <img src="/img/card.jpg" alt="jinx card" />
-              </div> -->
-
-            <div id="lvl1">
-                <div class="popup" onclick="myFunction1()"><img class="bubbleBig" src="./images/bubble.png" alt="bubble">
-                    <span style="z-index: 1;"><span class="center">Start</span></span></span>
-                    <span class="popuptext" id="myPopup1"><p>Start</p>
-                        <p>This lesson will teach you the basics of the language, how it came about and prepare you to start learning!</p>
-                        <a href="lesson1.html">
-                            <button>Start Lesson</button>
-                          </a>
-                    </span>
-                </div>
-            </div>
-
-            <div id="lvl2">
-                <div class="popup" onclick="myFunction2()"><img class="bubbleSml" src="./images/bubble.png" alt="bubble">
-                    <span class="popuptext" id="myPopup2">Numbers
-                        <p>This lesson focus on the number system in the language!</p>
-                        <a>                            
-                            <button onclick="window.location.href='lesson1quiz.html'" class="button1" type="button">Option 1</button>
-                        </a>
-                    </span>
-                  </div>
-            </div>
-
-            <div id="lvl3">
-                <div class="popup" onclick="myFunction3()"><img class="bubbleMdm" src="./images/bubble.png" alt="bubble">
-                    <span class="popuptext" id="myPopup3"><p>Family</p>
-                        <p>This lesson will teach you how to refer to your friends and family in this laguage.</p>
-                        <a>
-                            <button onclick="window.location.href='Familylvl1.html'" class="button1" type="button">Option 1</button>
-                          </a>
-                    </span>
-                </div>
-                
-            </div>
-
-            <div id="lvl4">
-                <span><a href=><img class="bubbleMdm" src="./images/bubble.png" alt="bubble"></a></span>
-            </div>
-
-            <div id="lvl5">
-                <span><a href=><img class="bubbleSml" src="./images/bubble.png" alt="bubble"></a></span>
-            </div>
-
-            <div id="lvl6">
-                <span>
-                    <a href="familylvl2.html">
-                        <img class="bubbleBig" src="./images/bubble.png" alt="bubble">
-                    </a>
+<body>
+    <nav class="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
                 </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item1">
+                        <a class="nav-link" href="main.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Track My Progress</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Friends</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Leaderboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="moreInfo.html">More Information</a>
+                    </li>
+                </ul>
             </div>
-
-            <div id="lvl9">
-                <span>
-                    <a href="familylvl3.html">
-                        <img class="bubbleSml" src="./images/bubble.png" alt="bubble">
-                    </a>
-                </span>
-            </div>
-
-            <div id="lvl7">
-                <span><a href=><img class="bubbleSml" src="./images/bubble.png" alt="bubble"></a></span>
-            </div>
-
-            <div id="lvl8">
-                <span><a href=><img class="bubbleMdm" src="./images/bubble.png" alt="bubble"></a></span>
-            </div>
-
-            
-
-            <div id="lvl10">
-                <div class="popup" onclick="myFunction10()"><img class="bubbleSml" src="./images/bubble.png" alt="bubble">
-                    <span class="popuptext" id="myPopup10">Almost done!
-                        <p>Let's put together all we've learned so far!</p>
-                        <a href="https://www.example.com">
-                            <button>Start Lesson</button>
-                          </a>
-                    </span>
-                  </div>
-            <a name="bottom" id="bottom"></a>
         </div>
-    </body> 
-    
+    </nav>
+    <div id="container">
+        <div id="top"></div>
+
+        <div id="lvl1">
+            <div class="popup" onclick="myFunction1()"><img class="bubbleBig" src="./images/start_bubble.png"
+                    alt="bubble">
+                <span style="margin-left:-165px;" class="popuptext" id="myPopup1">
+                    <p>Start</p>
+                    <p>This lesson will teach you the basics of the language, how it came about and prepare you to start
+                        learning!</p>
+                    <a href="">
+                        <button>Start Lesson</button>
+                    </a>
+                </span>
+            </div>
+        </div>
+
+        <div id="lvl2">
+            <div class="popup" onclick="myFunction2()"><img class="bubbleSml" src="./images/num_buble.png" alt="bubble">
+                <span style="margin-left:-100px;" class="popuptext" id="myPopup2">
+                    <p>Numbers</p>
+                    <p>This lesson focus on the number system in the language!</p>
+                    <a href="https://www.example.com">
+                        <button>Lesson 1</button>
+                    </a>
+                    <a href="https://www.example.com">
+                        <button>Lesson 2</button>
+                    </a>
+                    <a href="https://www.example.com">
+                        <button>Lesson 3</button>
+                    </a>
+                </span>
+            </div>
+        </div>
+
+        <div id="lvl3">
+            <div class="popup" onclick="myFunction3()"><img class="bubbleMdm" src="./images/family_bubble.png"
+                    alt="bubble">
+                <span style="margin-left:-150px;" class="popuptext" id="myPopup3">
+                    <p>Family</p>
+                    <p>This lesson will teach you how to refer to your friends and family in this laguage.</p>
+                    <a href="Familylvl1.html">
+                        <button>Lesson 1</button>
+                    </a>
+                    <a href="familylvl2.html">
+                        <button>Lesson 2</button>
+                    </a>
+                    <a href="familylvl3.html">
+                        <button>Lesson 3</button>
+                    </a>
+                </span>
+            </div>
+
+        </div>
+
+        <div id="lvl4">
+            <div class="popup" onclick="myFunction4()"><img class="bubbleMdm" src="./images/pronoun_bubble.png"
+                    alt="bubble">
+                <span style="margin-left:-145px;" class="popuptext" id="myPopup4">
+                    <p>Pronouns</p>
+                    <p>This lesson will teach you how to refer to your friends and family in this laguage.</p>
+                    <a href="">
+                        <button>Lesson 1</button>
+                    </a>
+                    <a href="">
+                        <button>Lesson 2</button>
+                    </a>
+                    <a href="">
+                        <button>Lesson 3</button>
+                    </a>
+                </span>
+            </div>
+        </div>
+
+        <div id="lvl5">
+            <div class="popup" onclick="myFunction5()"><img class="bubbleSml" src="./images/colour_bubble.png"
+                    alt="bubble">
+                <span style="margin-left:-125px;" class="popuptext" id="myPopup5">
+                    <p>Colours</p>
+                    <p>These lessons will help you memorize the words for colours.</p>
+                    <a href="">
+                        <button>Lesson 1</button>
+                    </a>
+                    <a href="">
+                        <button>Lesson 2</button>
+                    </a>
+                    <a href="">
+                        <button>Lesson 3</button>
+                    </a>
+                </span>
+            </div>
+        </div>
+
+        <div id="lvl6">
+            <div class="popup" onclick="myFunction6()"><img class="bubbleBig" src="./images/animal_bubble.png"
+                    alt="bubble">
+                <span style="margin-left:-165px;" class="popuptext" id="myPopup6">
+                    <p>Animals</p>
+                    <p>Learn about how to refer to your pet, farm animals and wild animals!</p>
+                    <a href="">
+                        <button>Lesson 1</button>
+                    </a>
+                    <a href="">
+                        <button>Lesson 2</button>
+                    </a>
+                    <a href="">
+                        <button>Lesson 3</button>
+                    </a>
+                </span>
+            </div>
+        </div>
+
+        <div id="lvl7">
+            <div class="popup" onclick="myFunction7()"><img class="bubbleSml" src="./images/food_bubble.png"
+                    alt="bubble">
+                <span style="margin-left:-120px;" class="popuptext" id="myPopup7">
+                    <p>Food</p>
+                    <p>Learn to talk about food! The food in Squamish culture may not be what you're used to eating.</p>
+                    <a href="">
+                        <button>Lesson 1</button>
+                    </a>
+                    <a href="">
+                        <button>Lesson 2</button>
+                    </a>
+                    <a href="">
+                        <button>Lesson 3</button>
+                    </a>
+                </span>
+            </div>
+        </div>
+
+        <div id="lvl8">
+            <div class="popup" onclick="myFunction8()"><img class="bubbleMdm" src="./images/verb_bubble.png"
+                    alt="bubble">
+                <span style="margin-left:-145px;" class="popuptext" id="myPopup8">
+                    <p>Verbs</p>
+                    <p>Are you walking or running? These lessons will teach you some action words to talk about doing things!</p>
+                    <a href="">
+                        <button>Lesson 1</button>
+                    </a>
+                    <a href="">
+                        <button>Lesson 2</button>
+                    </a>
+                    <a href="">
+                        <button>Lesson 3</button>
+                    </a>
+                </span>
+            </div>
+        </div>
+        <div id="lvl9">
+            <div class="popup" onclick="myFunction9()"><img class="bubbleSml" src="./images/adjective_bubble.png"
+                    alt="bubble">
+                <span style="margin-left:-125px;" class="popuptext" id="myPopup9">
+                    <p>Adjectives</p>
+                    <p>Adjectives are words used to describe things. This lesson will teach some new vocab!</p>
+                    <a href="">
+                        <button>Lesson 1</button>
+                    </a>
+                    <a href="">
+                        <button>Lesson 2</button>
+                    </a>
+                    <a href="">
+                        <button>Lesson 3</button>
+                    </a>
+                </span>
+            </div>
+        </div>
+
+        <div id="lvl10">
+            <div class="popup" onclick="myFunction10()"><img class="bubbleMdm" src="./images/nature_bubble.png"
+                    alt="bubble">
+                <span style="margin-left:-150px;" class="popuptext" id="myPopup10">
+                    <p>Nature</p>
+                    <p>Nature is a big part of Squamish culture; this lesson teaches you words to talk about nature and
+                        the world around you.</p>
+                    <a href="">
+                        <button>Lesson 1</button>
+                    </a>
+                    <a href="">
+                        <button>Lesson 2</button>
+                    </a>
+                    <a href="">
+                        <button>Lesson 3</button>
+                    </a>
+                </span>
+            </div>
+        </div>
+
+        <div id="lvl11">
+            <div class="popup" onclick="myFunction11()"><img class="bubbleSml" src="./images/end_bubble.png"
+                    alt="bubble">
+                <span style="margin-left:-100px;" class="popuptext" id="myPopup11">Almost done!
+                    <p>Let's put together all we've learned so far!</p>
+                    <a href="https://www.example.com">
+                        <button>Lesson 1</button>
+                    </a>
+                    <a href="https://www.example.com">
+                        <button>Lesson 2</button>
+                    </a>
+                    <a href="https://www.example.com">
+                        <button>Lesson 3</button>
+                    </a>
+                </span>
+            </div>
+        </div>
+        <a name="bottom" id="bottom"></a>
+    </div>
+</body>
+
 </html>
