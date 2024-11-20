@@ -1,17 +1,4 @@
-const translations = {
-    'Hello': 'Í7áx̱a',
-    'Goodbye': 'Huy chexw',
-    'Thank you': 'Chen kw’enmantum',
-    'Please': 'Chénkw\'en',
-    'Yes': 'Áwat',
-    'No': 'Nilh',
-    'Friend': 'Sníchim',
-    'Water': 'Stakw',
-    'Food': 'Sha7áy',
-    'House': 'Ch’á7elhay',
-    'Earth': 'St’éx̱ts’em',
-    'Mountain': 'Nexwlelexm',
-};
+let translations = {};  // Declare a global variable to store translations
 
 // Show translation in a popup near clicked words
 function showTranslation(element, word) {
@@ -42,6 +29,7 @@ document.addEventListener('click', (event) => {
 const searchBox = document.getElementById("search-box");
 const dropdown = document.getElementById("dropdown");
 
+// Handle search input without debounce
 searchBox.addEventListener("input", () => {
     const query = searchBox.value.toLowerCase();
     dropdown.innerHTML = ""; // Clear previous results
@@ -86,3 +74,42 @@ document.addEventListener("click", (event) => {
         dropdown.style.display = "none";
     }
 });
+
+// Fetch translations from CSV
+function fetchTranslations() {
+    fetch('/toolbox.csv') // Update the path to your CSV file
+        .then(response => response.text())
+        .then(data => {
+            translations = parseCSV(data);  // Store translations in the global object
+            populateWords(translations);    // Populate words for display
+        })
+        .catch(error => console.error('Error loading CSV:', error));
+}
+
+// Parse the CSV data and return as a key-value pair object
+function parseCSV(data) {
+    const lines = data.split('\n');
+    const translationsObj = {};  // Use an object for fast lookup
+    for (let line of lines.slice(1)) { // Skip the header
+        const [word, translation] = line.split(',');
+        if (word && translation) {
+            translationsObj[word.trim()] = translation.trim();
+        }
+    }
+    return translationsObj;
+}
+
+// Populate words (for display in the center-container)
+function populateWords(translations) {
+    const container = document.querySelector('.center-container');
+    for (let word in translations) {
+        const span = document.createElement('span');
+        span.className = 'word';
+        span.innerHTML = `${word} &nbsp; &nbsp;`;
+        span.onclick = () => showTranslation(span, word);
+        container.appendChild(span);
+    }
+}
+
+// Initialize the page
+document.addEventListener('DOMContentLoaded', fetchTranslations);
