@@ -6,12 +6,12 @@ body {
 .container{
     background-color: beige;
 }
-.navbar-toggler{
+/* .navbar-toggler{
     position: fixed;
     top: 9%;
     left: 5%;
     border: none;
-}
+} */
 #navbarNav{
     position: fixed;
     top: 15%;
