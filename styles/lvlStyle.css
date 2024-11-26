@@ -1,12 +1,12 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: teal;
+    background-color: beige;
   }
 
   .family-container {
     max-width: 900px;
     margin: 50px auto;
-    background: beige;
+    background: white;
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -26,8 +26,8 @@ body {
     color: #001e4d;
   }
   .btn{
-    background: teal;
-    color: white;
+    background: beige;
+    color: black;
     font-weight: 500;
     width: 100%;
     border: 1px solid #222;

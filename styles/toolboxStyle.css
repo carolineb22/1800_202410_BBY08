@@ -128,6 +128,17 @@ body {
     padding: 20px;
     text-align: center;
     border: 1px solid #ddd;
+    border-radius: 10px;
+
+}
+
+.grid-item button{
+
+    background-color: beige;
+    border-radius: 5px;
+
+
+
 }
 
 .container {
