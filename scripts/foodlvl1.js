@@ -1,52 +1,42 @@
-
- // const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+// const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
  // const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
    // return new bootstrap.Tooltip(tooltipTriggerEl);
 
-  const questions = [
+   const questions = [
     {
-      question: "elhtách",
+      question: "seplín",
       options: [
-        { text: "Father", correct: false},
-        { text: "Mother", correct: false},
-        { text: "Sibling", correct: false},
-        { text: "Parents", correct: true},
+        { text: "water", correct: false},
+        { text: "bread", correct: true},
+        { text: "tomato", correct: false},
+        { text: "honey", correct: false},
       ]
     },
     {
-      question: "chésha7",
+      question: "sḵ’ey̓",
       options: [
-        { text: "Mother", correct: true},
-        { text: "Father", correct: false},
-        { text: "Grandfather", correct: false},
-        { text: "Daughter", correct: false},
+        { text: "beef", correct: false},
+        { text: "sweet potato", correct: false},
+        { text: "peanut", correct: false},
+        { text: "smoked fish", correct: true},
       ]
     },
     {
-      question: "man",
+      question: "slhum̓",
       options: [
-        { text: "Uncle", correct: false},
-        { text: "Mother", correct: false},
-        { text: "Father", correct: true},
-        { text: "Sister", correct: false},
+        { text: "milk", correct: false},
+        { text: "soup", correct: true},
+        { text: "chewing gum", correct: false},
+        { text: "steak", correct: false},
       ]
     },
     {
-      question: "men̓",
+      question: "yetwán",
       options: [
-        { text: "Child", correct: true},
-        { text: "Mother", correct: false},
-        { text: "Nephew", correct: false},
-        { text: "Niece", correct: false},
-      ]
-    },
-    {
-      question: "kwepkwúpits",
-      options: [
-        { text: "Uncle", correct: false},
-        { text: "Aunt", correct: false},
-        { text: "Older Sibling", correct: true},
-        { text: "Younger Sibling", correct: false},
+        { text: "porridge", correct: false},
+        { text: "egg", correct: false},
+        { text: "red salmonberry", correct: true},
+        { text: "green apple", correct: false},
       ]
     },
   ];
@@ -54,6 +44,7 @@
   const questionElement = document.getElementById("question");
   const optionButton = document.getElementById("option-buttons");
   const nextButton = document.getElementById("next-btn");
+  let counter = 0;
 
   let currentQuestionIndex = 0;
   let score = 0;
@@ -111,9 +102,19 @@
   function showScore(){
     resetState();
     questionElement.innerHTML = 'You got ' + score + ' out of ' + questions.length + ' correct.';
+    console.log(score);
+    if (counter <= 1) {
+    db.collection("Score").add({
+      points: score
+    })}
+    if(score < 5) {
     nextButton.innerHTML = "Play Again";
     nextButton.style.display = "block";
+    }
+    else {
+      nextButton.style.display = "block";
   }
+}
 
   function handleNextButton(){
     currentQuestionIndex++;
@@ -127,10 +128,24 @@
   nextButton.addEventListener("click", ()=>{
     if(currentQuestionIndex < questions.length) {
       handleNextButton();
-    }else {
+    }else if(score == questions.length) {
+      showScore();
+    }
+    else {
       startQuiz();
+      counter++;
 }
 
   })
 
   startQuiz();
+
+/*   async function getScore() {
+    console.log(score);
+    db.collection("gameScore").add({
+      points: score
+    })
+  }
+
+  getScore();
+*/
