@@ -54,8 +54,9 @@
   const questionElement = document.getElementById("question");
   const optionButton = document.getElementById("option-buttons");
   const nextButton = document.getElementById("next-btn");
+  
   let counter = 0;
-
+  let xp = 0;
   let currentQuestionIndex = 0;
   let score = 0;
 
@@ -111,7 +112,7 @@
 
   function showScore(){
     resetState();
-    questionElement.innerHTML = 'You got ' + score + ' out of ' + questions.length + ' correct.';
+    questionElement.innerHTML = 'You got ' + score + ' out of ' + questions.length + ' correct.  You've earned ${xp} XP!';
     console.log(score);
     if (counter <= 1) {
     db.collection("Score").add({

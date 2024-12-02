@@ -48,6 +48,7 @@
 
   let currentQuestionIndex = 0;
   let score = 0;
+  let xp = 0;
 
   function startQuiz() {
     currentQuestionIndex = 0;
@@ -99,23 +100,31 @@
     nextButton.style.display = "block";
   }
 
-  function showScore(){
+  function showScore() {
     resetState();
-    questionElement.innerHTML = 'You got ' + score + ' out of ' + questions.length + ' correct.';
-    console.log(score);
+    xp = score * 10; 
+    questionElement.innerHTML = `
+      You got ${score} out of ${questions.length} correct.<br>
+      You've earned ${xp} XP!
+    `;
+  
+    // Save the score and XP to the database
     if (counter <= 1) {
-    db.collection("Score").add({
-      points: score
-    })}
-    if(score < 5) {
-    nextButton.innerHTML = "Play Again";
-    nextButton.style.display = "block";
+      db.collection("Score").add({
+        points: score,
+        experience: xp 
+      });
     }
-    else {
+  
+   
+    if (score < questions.length) {
+      nextButton.innerHTML = "Play Again";
       nextButton.style.display = "block";
+    } else {
+      nextButton.innerHTML = "Congratulations!";
+      nextButton.style.display = "block";
+    }
   }
-}
-
   function handleNextButton(){
     currentQuestionIndex++;
     if(currentQuestionIndex < questions.length) {
