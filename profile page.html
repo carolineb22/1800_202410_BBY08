@@ -34,13 +34,11 @@
     document.getElementById('displayName').value = displayName;
     document.getElementById('username').value = username;
     document.getElementById('email').value = email;
-    document.getElementById('language').value = language;
 
     // Display data on the profile page
     document.getElementById('profileDisplayName').innerText = displayName;
     document.getElementById('profileUsername').innerText = username;
     document.getElementById('profileEmail').innerText = email;
-    document.getElementById('profileLanguage').innerText = language;
   });
 
   // Save profile data to localStorage when the Save Changes button is clicked
@@ -48,18 +46,15 @@
     const displayName = document.getElementById('displayName').value;
     const username = document.getElementById('username').value;
     const email = document.getElementById('email').value;
-    const language = document.getElementById('language').value;
 
     localStorage.setItem('displayName', displayName);
     localStorage.setItem('username', username);
     localStorage.setItem('email', email);
-    localStorage.setItem('language', language);
 
     // Update the displayed profile info
     document.getElementById('profileDisplayName').innerText = displayName;
     document.getElementById('profileUsername').innerText = username;
     document.getElementById('profileEmail').innerText = email;
-    document.getElementById('profileLanguage').innerText = language;
 
     alert("Profile changes saved successfully!");
   }
@@ -88,7 +83,6 @@
       <div>
         <h3 class="fw-bold mb-1">Display Name</h3>
         <p class="text-muted mb-1">@username</p>
-        <button class="btn btn-primary btn-sm">Language being learnt</button>
       </div>
     </div>
 
@@ -136,10 +130,6 @@
             <div class="mb-3">
               <label for="email" class="form-label">Email</label>
               <input type="email" class="form-control" id="email" value="greatemail@gmail.com">
-            </div>
-            <div class="mb-3">
-              <label for="language" class="form-label">Language Being Learnt</label>
-              <input type="text" class="form-control" id="language" value="Language">
             </div>
           </form>
         </div>
