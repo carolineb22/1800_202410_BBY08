@@ -9,6 +9,7 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="./styles/style.css">
 
+
   <style>
     .container {
       max-width: 800px;
@@ -66,7 +67,9 @@
     <div class="d-flex justify-content-between align-items-center mb-3">
       <button onclick="window.history.back()" class="btn btn-light">← Back</button>
       <div>
-        <button class="btn btn-secondary me-2">Friends</button>
+        <a href="friends.html">
+          <button class="btn btn-secondary me-2">Friends</button>
+        </a>
         <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editProfileModal">Edit Profile</button>
       </div>
     </div>
@@ -75,13 +78,15 @@
     <div class="d-flex align-items-center mb-4">
       <!-- Profile Picture and Logout Button -->
       <div class="text-center me-4">
-        <img src="https://via.placeholder.com/120" class="rounded-circle mb-2" alt="Profile Picture" style="width: 180px; height: 180px;">
-        <button class="btn btn-outline-secondary btn-sm w-100" onclick="window.location.href='index.html'">Log out</button>
+        <img src="https://via.placeholder.com/120" class="rounded-circle mb-2" alt="Profile Picture"
+          style="width: 180px; height: 180px;">
+        <button class="btn btn-outline-secondary btn-sm w-100" onclick="window.location.href='index.html'">Log
+          out</button>
       </div>
 
       <!-- User Info -->
       <div>
-        <h3 class="fw-bold mb-1">Display Name</h3>
+        <h3 class="fw-bold mb-1">Display Name</span></h3>
         <p class="text-muted mb-1">@username</p>
       </div>
     </div>
@@ -90,8 +95,12 @@
     <div class="mb-4">
       <h5 class="fw-bold">Public Profile</h5>
       <div class="bg-light p-3 rounded text-center">
-        <button class="btn btn-secondary mb-2">999 Friends</button>
-        <p>Joined 00/00/0000</p>
+        <a href="friends.html">
+          <button class="btn btn-secondary mb-2">0 Friends</button>
+        </a>
+        <p>Joined
+        <div id="joinDateDisplay"></div>
+        </p>
         <div class="d-flex justify-content-around mt-3">
           <span><strong>Today's XP:</strong> 100</span>
           <span><strong>Total XP:</strong> 2000</span>
@@ -104,13 +113,15 @@
       <h5 class="fw-bold">Private Profile</h5>
       <div class="bg-light p-3 rounded text-center">
         <p>Email: greatemail@gmail.com</p>
-        <button class="btn btn-outline-secondary btn-sm w-100" onclick="window.location.href='index.html'">Log out</button>
+        <button class="btn btn-outline-secondary btn-sm w-100" onclick="window.location.href='index.html'">Log
+          out</button>
       </div>
     </div>
   </div>
 
   <!-- Edit Profile Modal -->
-  <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel" aria-hidden="true">
+  <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
@@ -146,7 +157,9 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  
 </body>
 
 </html>
