@@ -108,29 +108,71 @@ function selectOption(e) {
 
 function showScore() {
   resetState();
-  xp = score * 10; // Example: 10 XP per correct answer
+  xp = score * 10;
   questionElement.innerHTML = `
     You got ${score} out of ${questions.length} correct.<br>
     You've earned ${xp} XP!
   `;
 
-  // Save the score and XP to the database
-  if (counter <= 1) {
-    db.collection("Score").add({
-      points: score,
-      experience: xp // Save XP to the database
-    });
-  }
 
-  // Update button text based on performance
-  if (score < questions.length) {
-    nextButton.innerHTML = "Play Again";
-    nextButton.style.display = "block";
+  const user = firebase.auth().currentUser;
+  if (user) {
+      const userId = user.uid; 
+
+     
+      const userDocRef = db.collection("users").doc(userId);
+
+    
+      userDocRef.get().then((doc) => {
+          if (!doc.exists) {
+              
+              userDocRef.set({
+                  score: score,
+                  xp: xp
+              }).then(() => {
+                  console.log("User document created with initial score and XP.");
+              }).catch((error) => {
+                  console.error("Error creating user document: ", error);
+              });
+          } else {
+              
+              userDocRef.update({
+                  score: firebase.firestore.FieldValue.increment(score), 
+                  xp: firebase.firestore.FieldValue.increment(xp) 
+              }).then(() => {
+                  console.log("Score and XP successfully added to the user's total score and XP.");
+              }).catch((error) => {
+                  console.error("Error adding score and XP to the user's total: ", error);
+              });
+          }
+      }).catch((error) => {
+          console.error("Error fetching user document: ", error);
+      });
+
+      if (counter <= 1) {
+          db.collection("Score").add({
+              points: score,
+              experience: xp,
+              timestamp: firebase.firestore.FieldValue.serverTimestamp() 
+          }).then(() => {
+              console.log("Quiz score and XP saved successfully.");
+          }).catch((error) => {
+              console.error("Error saving quiz score and XP: ", error);
+          });
+      }
+
+      if (score < questions.length) {
+          nextButton.innerHTML = "Play Again";
+          nextButton.style.display = "block";
+      } else {
+          nextButton.innerHTML = "Congratulations!";
+          nextButton.style.display = "block";
+      }
   } else {
-    nextButton.innerHTML = "Congratulations!";
-    nextButton.style.display = "block";
+      console.error("User not authenticated.");
   }
 }
+
 
 function handleNextButton() {
   currentQuestionIndex++;
