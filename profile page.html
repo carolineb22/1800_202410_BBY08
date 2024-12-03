@@ -48,7 +48,7 @@
     <div class="d-flex align-items-center mb-4">
       <!-- Profile Picture and Logout Button -->
       <div class="text-center me-4">
-        <img src="https://via.placeholder.com/120" class="rounded-circle mb-2" alt="Profile Picture"
+        <img src="images/bearpfp.png" class="rounded-circle mb-2" alt="Profile Picture"
           style="width: 180px; height: 180px;">
         <button class="btn btn-outline-secondary btn-sm w-100" onclick="window.location.href='index.html'">Log out</button>
       </div>
@@ -57,7 +57,6 @@
       <div>
         <h3 class="fw-bold mb-1" id="profileDisplayName">Display Name</h3>
         <p class="text-muted mb-1" id="profileUsername">@username</p>
-        <p class="text-muted mb-1" id="profileJoined">Joined: N/A</p>
       </div>
     </div>
 
@@ -69,7 +68,7 @@
           <button class="btn btn-secondary mb-2">0 Friends</button>
         </a>
         <p>Joined
-          <div id="joinDateDisplay"></div>
+          <span class="text-muted mb-1" id="profileJoined">N/A</span>
         </p>
         <div class="d-flex justify-content-around mt-3">
           <span><strong> Questions answered correctly: <p class="text-muted mb-1" id="profileScore">Score: 0</p></strong></span>
@@ -101,15 +100,15 @@
             <form>
               <div class="mb-3">
                 <label for="displayName" class="form-label">Display Name</label>
-                <input type="text" class="form-control" id="displayName" value="Display Name">
+                <input type="text" class="form-control" id="displayName" value="" placeholder="Display Name">
               </div>
               <div class="mb-3">
                 <label for="username" class="form-label">Username</label>
-                <input type="text" class="form-control" id="username" value="@username">
+                <input type="text" class="form-control" id="username" value="" placeholder="@username">
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" value="greatemail@gmail.com">
+                <input type="email" class="form-control" id="email" value="" placeholder="email@email.com">
               </div>
             </form>
           </div>
