@@ -28,12 +28,12 @@
 <body>
     <div class="container">
         <div class="profile">
-            <button style="font-size:16px" onclick="window.location.href='profile page.html'">
+            <button style="font-size:16px; z-index: 10;" onclick="window.location.href='profile page.html'">
                 <i class="fas fa-users"></i>
                 <div class="Pr">Profile</div>
             </button>
         </div>
-        <nav class="navbar" style="z-index: 3;">
+        <nav class="navbar" style="z-index: 10;">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -57,7 +57,7 @@
             </div>
         </nav>
 
-        <div class="leaderboard">
+        <div class="leaderboard" style="z-index: 0;">
             <h1 class="text-center">Top 10 Leaderboard</h1>
             <table class="table">
                 <thead>
