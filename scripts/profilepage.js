@@ -58,26 +58,24 @@ function loadProfileData() {
 
 // Save profile changes to Firestore when the Save Changes button is clicked
 function saveProfileChanges() {
-    // Only gather the editable fields (displayName, username, email)
+    // Only gather the editable fields (displayName, username)
     const displayName = document.getElementById('displayName').value;
     const username = document.getElementById('username').value;
-    const email = document.getElementById('email').value;
 
     // Save changes back to Firestore
     const userId = firebase.auth().currentUser.uid;
     firebase.firestore().collection('users').doc(userId).update({
         name: displayName,
-        username: username,
-        email: email
+        username: username
     }).then(() => {
         // Update the displayed profile info after saving
         document.getElementById('profileDisplayName').innerText = displayName;
         document.getElementById('profileUsername').innerText = `@${username}`;
-        document.getElementById('profileEmail').innerText = email;
 
         alert("Profile changes saved successfully!");
     }).catch(error => {
         console.log("Error updating profile:", error);
     });
 }
+
 
