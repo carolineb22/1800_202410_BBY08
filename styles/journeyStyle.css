@@ -1,7 +1,6 @@
 html,
 
 element-selector {
-	/* Hides overflow on the x-axis*/
 	overflow-x: hidden; 
 }
 
@@ -29,7 +28,6 @@ body{
     color: rgb(40, 13, 251);
   }
 
-/* Phone screen */
 @media only screen and (max-width: 700px) {
         #container {
             display: grid;
@@ -113,14 +111,12 @@ body{
 
 
 
-    /* Popup container */
 .popup {
     position: relative;
     display: inline-block;
     cursor: pointer;
   }
   
-/* The actual popup (appears on top) */
 .popup .popuptext {
     visibility: hidden;
     width: 150px;
@@ -135,14 +131,12 @@ body{
     margin-left: -90%;
   }
   
-  /* Toggle this class when clicking on the popup container (hide and show the popup) */
   .popup .show {
     visibility: visible;
   }
     
 }
 
-/* Ipad screen */
 @media only screen and (min-width: 701px) and (max-width: 1280px) {
 
     #container {
@@ -226,14 +220,12 @@ body{
 
 
 
-/* Popup container */
 .popup {
 position: relative;
 display: inline-block;
 cursor: pointer;
 }
 
-/* The actual popup (appears on top) */
 .popup .popuptext {
 visibility: hidden;
 width: 150px;
@@ -247,14 +239,12 @@ z-index: 1;
 bottom: 100%;
 }
 
-/* Toggle this class when clicking on the popup container (hide and show the popup) */
 .popup .show {
 visibility: visible;
 }
 
 }
 
-/* Desktop */
 @media only screen and (min-width: 1281px) {
     #container {
         display: grid;
@@ -340,14 +330,12 @@ visibility: visible;
 
 
 
-/* Popup container */
 .popup {
 position: relative;
 display: inline-block;
 cursor: pointer;
 }
 
-/* The actual popup (appears on top) */
 .popup .popuptext {
 visibility: hidden;
 width: 300px;
@@ -395,9 +383,20 @@ margin-left: -240px !important;
 }
 
 
-/* Toggle this class when clicking on the popup container (hide and show the popup) */
 .popup .show {
 visibility: visible;
 }
 
 }
+
+.footer {
+    position: fixed;   
+    bottom: 0;          
+    left: 0;            
+    width: 100%;       
+    text-align: center;
+    font-size: 0.9em;   
+    color: #777;      
+    padding: 10px;      
+  }
+  

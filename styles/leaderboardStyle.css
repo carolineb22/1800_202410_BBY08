@@ -1,7 +1,7 @@
 html, body {
     height: 100%;
     margin: 0;
-    background-color: beige !important; /* Ensure the background color is applied to both elements */
+    background-color: beige !important;     
 }
 
 .navbar-toggler{
@@ -21,8 +21,15 @@ html, body {
     border-radius: 20px;
     border-color: green;
 }
+
+#navbarNav{
+    position: fixed;
+    top: 15%;
+    left: 5%;
+    
+}
 .nav-item {
-    background-color: beige;
+    background-color: white;
     height: 65px;
     width: 200px;
     font-size: 16pt;
@@ -34,7 +41,7 @@ html, body {
 }
 
 .nav-item1 {
-    background-color: beige;
+    background-color: white;
     height: 65px;
     width: 200px;
     font-size: 16pt;
@@ -49,17 +56,17 @@ html, body {
     max-width: 800px;
     margin: 0 auto;
     margin-top: 20px;
-    position: fixed;  /* Make the leaderboard fixed */
-    top: 100px;       /* Adjust this to place it below the navbar */
-    left: 0;          /* Align it to the left */
-    right: 0;         /* Ensure it spans the full width of the screen */
-    bottom: 0;        /* Adjust this if you want the leaderboard to fill the height of the screen */
-    overflow-y: auto; /* Allow vertical scrolling if there are more items than space available */
-    max-width: 800px; /* Set max width if needed */
-    margin: 0 auto;   /* Center the leaderboard horizontally */
-    z-index: 999;     /* Ensure it's on top of other content, like the navbar */
-    background-color: beige; /* Ensure the background is beige */
-    padding-top: 20px; /* Optional: Add some padding for spacing */
+    position: fixed;  
+    top: 100px;      
+    left: 0;          
+    right: 0;        
+    bottom: 0;      
+    overflow-y: auto; 
+    max-width: 800px; 
+    margin: 0 auto;   
+    z-index: 999;     
+    background-color: beige; 
+    padding-top: 20px; 
 }
 
 .leaderboard table {
@@ -79,3 +86,14 @@ html, body {
 .leaderboard th {
     font-weight: bold;
 }
+.footer {
+    position: fixed;   
+    bottom: 0;          
+    left: 0;            
+    width: 100%;       
+    text-align: center;
+    font-size: 0.9em;   
+    color: #777;      
+    padding: 10px;      
+  }
+  
