@@ -2,55 +2,19 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="./styles/toolboxStyle.css">
-
+    <link rel="stylesheet" href="./styles/leaderboardStyle.css">
     <title>Pathways - Leaderboard</title>
 
-    <style>
-        .nav-item {
-            background: rgb(255, 255, 255);
-            height: 65px;
-            width: 200px;
-            font-size: 16pt;
-            border-radius: 10px;
-            text-align: center;
-            margin-top: 4px;
-            border: 3px solid green;
-            padding-top: 5px;
-        }
-        .nav-item1 {
-            background: rgb(255, 255, 255);
-            height: 65px;
-            width: 200px;
-            font-size: 16pt;
-            border-radius: 10px;
-            text-align: center;
-            margin-top: 4px;
-            border: 3px solid green;
-            padding-top: 5px;
-        }
- 
-    </style>
     <meta name="comp1800 template" content="My 1800 App">
-
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap Library CSS CDN go here -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Boostrap Library JS CDN  go here -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/5e83924064.js" crossorigin="anonymous"></script>
-    <!-- Bootstrap Library CSS CDN go here -->
-    <!-- Boostrap Library JS CDN  go here -->
 
-    <!-------------------------------------------------------->
-    <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
-    <!-------------------------------------------------------->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
@@ -58,136 +22,63 @@
     <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
-
-
-
-    <!-- Other libraries go here -->
-
-    <!-- Link to styles of your own -->
-
-
-    <!-- <link rel="stylesheet" href="./styles/style.css"> -->
-    <link rel="stylesheet" href="./styles/style.css">
-
-
-    
 </head>
 
 <body>
-
     <div class="container">
         <div class="profile">
-          <button style="font-size:16px" onclick="window.location.href='profile page.html'">
-            <i class="fas fa-users"></i>
-            <div class="Pr">Profile</div>
-          </button>
+            <button style="font-size:16px" onclick="window.location.href='profile page.html'">
+                <i class="fas fa-users"></i>
+                <div class="Pr">Profile</div>
+            </button>
         </div>
         <nav class="navbar" style="z-index: 3;">
-          <div class="container-fluid">
-              <a class="navbar-brand" href="#"></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon">
-                  </span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav">
-                      <li class="nav-item1">
-                          <a class="nav-link" href="main.html">Home</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="#">Track My Progress</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="friends.html">Friends</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="#">Leaderboard</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="moreInfo.html">More Information</a>
-                      </li>
-                  </ul>
-              </div>
-          </div>
-      </nav>
-
-       
-        <div>
-            <h1>
-                Squamish Alphabet
-            </h1>
-
-
-            <div class="grid-container">
-                <div class="grid-item"><button onclick="playAudio('audio/45226_ca_object_representations_media_7542_mp3.mp3')">a</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/97237_ca_object_representations_media_7553_mp3.mp3')">aa</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/17743_ca_object_representations_media_7544_mp3.mp3')">ch</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/48948_ca_object_representations_media_7551_mp3.mp3')">ch'</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/70921_ca_object_representations_media_7555_mp3.mp3')">e</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/34013_ca_object_representations_media_7554_mp3.mp3')">h</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/6540_ca_object_representations_media_7556_mp3.mp3')">i</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/6540_ca_object_representations_media_7556_mp3.mp3')">ii</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/47429_ca_object_representations_media_7567_mp3.mp3')">k</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/54215_ca_object_representations_media_7566_mp3.mp3')">k'</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/16417_ca_object_representations_media_7561_mp3.mp3')">kw</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/80756_ca_object_representations_media_7563_mp3.mp3')">kw'</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/69361_ca_object_representations_media_7557_mp3.mp3')">ḵ</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/85275_ca_object_representations_media_7671_mp3.mp3')">ḵ'</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/47497_ca_object_representations_media_7565_mp3.mp3')">ḵw</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/97074_ca_object_representations_media_7564_mp3.mp3')">ḵw'</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/47299_ca_object_representations_media_7568_mp3.mp3')">l</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/95004_ca_object_representations_media_7569_mp3.mp3')">l̓</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/75929_ca_object_representations_media_7570_mp3.mp3')">lh</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/28584_ca_object_representations_media_7571_mp3.mp3')">m</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/27440_ca_object_representations_media_7572_mp3.mp3')">m̓</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/63084_ca_object_representations_media_7573_mp3.mp3')">n</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/72151_ca_object_representations_media_7574_mp3.mp3')">n̓</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/31158_ca_object_representations_media_7575_mp3.mp3')">p</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/65973_ca_object_representations_media_7576_mp3.mp3')">p'</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/32655_ca_object_representations_media_7577_mp3.mp3')">s</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/10819_ca_object_representations_media_7578_mp3.mp3')">sh</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/49739_ca_object_representations_media_7579_mp3')">t</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/82564_ca_object_representations_media_7580_mp3')">t'</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/84269_ca_object_representations_media_7581_mp3.mp3')">tl'</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/30042_ca_object_representations_media_7582_mp3.mp3')">ts</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/7264_ca_object_representations_media_7583_mp3.mp3')">ts'</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/17861_ca_object_representations_media_7584_mp3.mp3')">u</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/6003_ca_object_representations_media_7585_mp3.mp3')">uu</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/93957_ca_object_representations_media_7586_mp3.mp3')">w</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/6508_ca_object_representations_media_7587_mp3.mp3')">w̓</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/96713_ca_object_representations_media_7588_mp3.mp3 ')">xw</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/54364_ca_object_representations_media_7590_mp3.mp3')">x̱</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/5604_ca_object_representations_media_7589_mp3.mp3')">x̱w</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/37850_ca_object_representations_media_7591_mp3.mp3')">y</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/37850_ca_object_representations_media_7591_mp3.mp3')">y̓</button></div>
-                <div class="grid-item"><button onclick="playAudio('audio/84095_ca_object_representations_media_7592_mp3.mp3')">7</button></div>
-             
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item1">
+                            <a class="nav-link" href="main.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="friends.html">Friends</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="leaderboard.html">Leaderboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="moreInfo.html">More Information</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
+        </nav>
 
-            <audio id="audioPlayer" controls style="display: block; margin-top: 20px;"></audio>
-
-            <script>
-                function playAudio(audio) {
-                    const audioPlayer = document.getElementById('audioPlayer');
-                    audioPlayer.src = audio; 
-                    audioPlayer.play(); 
-                }
-            </script>
-
-
-<div id="translationPopup" class="popup"></div>
-
-<div class="container">
-    <div class="center-container">
-        <input type="text" id="search-box" placeholder="Type a word..." />
-        <ul id="dropdown" class="popup"></ul>
+        <div class="leaderboard">
+            <h1 class="text-center">Top 10 Leaderboard</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Username</th>
+                        <th>XP</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboardTable">
+                    <!-- Top users will be dynamically populated here -->
+                </tbody>
+            </table>
+        </div>
     </div>
 
-   
-        </div>
-
-        <script src="/scripts/toolboxscript.js"></script>
+    <!-- Firebase initialization and Leaderboard script -->
+    <script src="./scripts/firebaseAPI_BBY08.js"></script>
+    <script src="./scripts/leaderboard.js"></script>
 
 </body>
 

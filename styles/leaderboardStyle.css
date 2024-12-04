@@ -1,0 +1,81 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: beige !important; /* Ensure the background color is applied to both elements */
+}
+
+.navbar-toggler{
+    position: fixed;
+    top: 9%;
+    left: 5%;
+    border: none;
+}
+
+.profile button {
+    position: fixed;
+    top: 6%;
+    right: 5%;
+    width: 70px;
+    padding:10px;
+    background-color: lightgray;
+    border-radius: 20px;
+    border-color: green;
+}
+.nav-item {
+    background-color: beige;
+    height: 65px;
+    width: 200px;
+    font-size: 16pt;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 4px;
+    border: 3px solid green;
+    padding-top: 5px;
+}
+
+.nav-item1 {
+    background-color: beige;
+    height: 65px;
+    width: 200px;
+    font-size: 16pt;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 4px;
+    border: 3px solid green;
+    padding-top: 5px;
+}
+
+.leaderboard {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 20px;
+    position: fixed;  /* Make the leaderboard fixed */
+    top: 100px;       /* Adjust this to place it below the navbar */
+    left: 0;          /* Align it to the left */
+    right: 0;         /* Ensure it spans the full width of the screen */
+    bottom: 0;        /* Adjust this if you want the leaderboard to fill the height of the screen */
+    overflow-y: auto; /* Allow vertical scrolling if there are more items than space available */
+    max-width: 800px; /* Set max width if needed */
+    margin: 0 auto;   /* Center the leaderboard horizontally */
+    z-index: 999;     /* Ensure it's on top of other content, like the navbar */
+    background-color: beige; /* Ensure the background is beige */
+    padding-top: 20px; /* Optional: Add some padding for spacing */
+}
+
+.leaderboard table {
+    background-color: beige;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.leaderboard th,
+.leaderboard td {
+    border: 1px solid beige;
+    padding: 8px;
+    text-align: center;
+}
+
+.leaderboard th {
+    font-weight: bold;
+}
